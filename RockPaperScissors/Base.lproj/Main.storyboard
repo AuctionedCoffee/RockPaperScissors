@@ -21,20 +21,19 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubF-z4-OUR" userLabel="Row1">
                                         <rect key="frame" x="0.0" y="20" width="352" height="69.5"/>
                                         <subviews>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rock Paper Scissors Lizard Spock" borderStyle="roundedRect" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="KvH-vB-jvO" userLabel="Title">
-                                                <rect key="frame" x="0.0" y="3.5" width="352" height="62.5"/>
-                                                <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Rock Paper Scissors Lizard Spock" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Diw-Eh-rAj" userLabel="Title">
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="69.5"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="26"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="KvH-vB-jvO" firstAttribute="centerX" secondItem="ubF-z4-OUR" secondAttribute="centerX" id="1rm-11-U1b"/>
-                                            <constraint firstItem="KvH-vB-jvO" firstAttribute="centerY" secondItem="ubF-z4-OUR" secondAttribute="centerY" id="EBi-MN-kaX"/>
-                                            <constraint firstItem="KvH-vB-jvO" firstAttribute="height" secondItem="ubF-z4-OUR" secondAttribute="height" multiplier="0.9" id="euS-oE-b2I"/>
-                                            <constraint firstItem="KvH-vB-jvO" firstAttribute="width" secondItem="ubF-z4-OUR" secondAttribute="width" id="zrf-M2-dmD"/>
+                                            <constraint firstItem="Diw-Eh-rAj" firstAttribute="width" secondItem="ubF-z4-OUR" secondAttribute="width" id="U8J-xu-CVi"/>
+                                            <constraint firstItem="Diw-Eh-rAj" firstAttribute="height" secondItem="ubF-z4-OUR" secondAttribute="height" id="nHW-Fc-0P6"/>
+                                            <constraint firstItem="Diw-Eh-rAj" firstAttribute="centerX" secondItem="ubF-z4-OUR" secondAttribute="centerX" id="oAF-Wa-9MW"/>
+                                            <constraint firstItem="Diw-Eh-rAj" firstAttribute="centerY" secondItem="ubF-z4-OUR" secondAttribute="centerY" id="t3p-8V-4aH"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wu7-JY-FHR" userLabel="Row2">
@@ -43,6 +42,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbT-xc-6xK" userLabel="Rock">
                                                 <rect key="frame" x="114.5" y="5" width="123" height="94"/>
                                                 <state key="normal" image="rock-paper-scissors"/>
+                                                <connections>
+                                                    <action selector="Rock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vYN-Te-QbL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,10 +61,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cja-Z8-XKD" userLabel="Lizard">
                                                 <rect key="frame" x="229" y="5.5" width="123" height="94"/>
                                                 <state key="normal" image="rock-paper-scissors copy 3"/>
+                                                <connections>
+                                                    <action selector="Lizard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZaM-sf-69t"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkI-lr-Czp" userLabel="Paper">
                                                 <rect key="frame" x="17.5" y="5.5" width="123.5" height="94"/>
                                                 <state key="normal" image="rock-paper-scissors copy"/>
+                                                <connections>
+                                                    <action selector="Paper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4T2-OL-yW2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -83,10 +91,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Po-ei-nQf" userLabel="Scissors">
                                                 <rect key="frame" x="53" y="5" width="123" height="94"/>
                                                 <state key="normal" image="rock-paper-scissors copy 2"/>
+                                                <connections>
+                                                    <action selector="Scissors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LY3-wO-YqG"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r2-iP-whh" userLabel="Spok">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r2-iP-whh" userLabel="Spock">
                                                 <rect key="frame" x="176" y="5" width="123" height="94"/>
                                                 <state key="normal" image="rock-paper-scissors copy 4"/>
+                                                <connections>
+                                                    <action selector="Spock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c11-WI-GOx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -110,6 +124,9 @@
                                                 <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                 <state key="normal" title="Reset" image="RPSLS"/>
+                                                <connections>
+                                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7tN-8i-e9N"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,23 +140,28 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hw-fz-jpY" userLabel="Row6">
                                         <rect key="frame" x="0.0" y="576" width="352" height="139"/>
                                         <subviews>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Score: " borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mEv-om-uDU">
-                                                <rect key="frame" x="220" y="42" width="123" height="55.5"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="User: " translatesAutoresizingMaskIntoConstraints="NO" id="P3R-7d-k4Q" userLabel="PickUser">
+                                                <rect key="frame" x="-17.5" y="0.0" width="176" height="28"/>
                                                 <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Result" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1M-Hp-lIq" userLabel="Result">
-                                                <rect key="frame" x="-26.5" y="76.5" width="176" height="55.5"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="PC: " translatesAutoresizingMaskIntoConstraints="NO" id="L82-iL-y2b" userLabel="PickPC">
+                                                <rect key="frame" x="-17.5" y="28" width="176" height="27.5"/>
                                                 <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Picks Player Picks PC" translatesAutoresizingMaskIntoConstraints="NO" id="L82-iL-y2b" userLabel="Picks">
-                                                <rect key="frame" x="-17.5" y="10.5" width="176" height="48.5"/>
-                                                <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Scores U:0   P:0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jCC-66-bz4" userLabel="Score">
+                                                <rect key="frame" x="167" y="20" width="193.5" height="55.5"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Winner: " translatesAutoresizingMaskIntoConstraints="NO" id="Cfm-7C-pmG" userLabel="Winner">
+                                                <rect key="frame" x="-17.5" y="55.5" width="176" height="49"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -147,18 +169,22 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="L82-iL-y2b" firstAttribute="height" secondItem="4Hw-fz-jpY" secondAttribute="height" multiplier="0.35" id="4bY-ot-u40"/>
+                                            <constraint firstItem="Cfm-7C-pmG" firstAttribute="top" secondItem="L82-iL-y2b" secondAttribute="bottom" id="1aj-Pz-dya"/>
+                                            <constraint firstItem="L82-iL-y2b" firstAttribute="height" secondItem="4Hw-fz-jpY" secondAttribute="height" multiplier="0.2" id="4bY-ot-u40"/>
+                                            <constraint firstItem="jCC-66-bz4" firstAttribute="height" secondItem="4Hw-fz-jpY" secondAttribute="height" multiplier="0.4" id="4gf-Mu-FLj"/>
+                                            <constraint firstItem="P3R-7d-k4Q" firstAttribute="centerX" secondItem="4Hw-fz-jpY" secondAttribute="centerX" multiplier="0.4" id="5BS-wH-EJI"/>
                                             <constraint firstItem="L82-iL-y2b" firstAttribute="centerX" secondItem="4Hw-fz-jpY" secondAttribute="centerX" multiplier="0.4" id="5z2-rR-foA"/>
-                                            <constraint firstItem="L82-iL-y2b" firstAttribute="centerY" secondItem="4Hw-fz-jpY" secondAttribute="centerY" multiplier="0.5" id="IeH-PY-1Zc"/>
-                                            <constraint firstItem="mEv-om-uDU" firstAttribute="width" secondItem="4Hw-fz-jpY" secondAttribute="width" multiplier="0.35" id="O7j-UB-1Qa"/>
-                                            <constraint firstItem="mEv-om-uDU" firstAttribute="centerY" secondItem="4Hw-fz-jpY" secondAttribute="centerY" id="P6m-Bx-H7F"/>
-                                            <constraint firstItem="mEv-om-uDU" firstAttribute="centerX" secondItem="4Hw-fz-jpY" secondAttribute="centerX" multiplier="1.6" id="RY2-GJ-u9V"/>
+                                            <constraint firstItem="P3R-7d-k4Q" firstAttribute="top" secondItem="4Hw-fz-jpY" secondAttribute="top" id="Ha8-Oa-P83"/>
+                                            <constraint firstItem="jCC-66-bz4" firstAttribute="top" secondItem="4Hw-fz-jpY" secondAttribute="top" constant="20" symbolic="YES" id="PXR-MO-dts"/>
+                                            <constraint firstItem="Cfm-7C-pmG" firstAttribute="width" secondItem="4Hw-fz-jpY" secondAttribute="width" multiplier="0.5" id="Pae-9G-X9V"/>
+                                            <constraint firstItem="jCC-66-bz4" firstAttribute="centerX" secondItem="4Hw-fz-jpY" secondAttribute="centerX" multiplier="1.5" id="QXw-IU-2RJ"/>
                                             <constraint firstItem="L82-iL-y2b" firstAttribute="width" secondItem="4Hw-fz-jpY" secondAttribute="width" multiplier="0.5" id="SEE-Aa-GY7"/>
-                                            <constraint firstItem="c1M-Hp-lIq" firstAttribute="centerX" secondItem="4Hw-fz-jpY" secondAttribute="centerX" multiplier="0.35" id="Xzo-J8-xRX"/>
-                                            <constraint firstItem="c1M-Hp-lIq" firstAttribute="width" secondItem="4Hw-fz-jpY" secondAttribute="width" multiplier="0.5" id="Z5t-zz-Aj4"/>
-                                            <constraint firstItem="mEv-om-uDU" firstAttribute="height" secondItem="4Hw-fz-jpY" secondAttribute="height" multiplier="0.4" id="dk3-Uu-wBq"/>
-                                            <constraint firstItem="c1M-Hp-lIq" firstAttribute="height" secondItem="4Hw-fz-jpY" secondAttribute="height" multiplier="0.4" id="dpY-UK-6iM"/>
-                                            <constraint firstItem="c1M-Hp-lIq" firstAttribute="centerY" secondItem="4Hw-fz-jpY" secondAttribute="centerY" multiplier="1.5" id="uX9-LY-oWu"/>
+                                            <constraint firstItem="L82-iL-y2b" firstAttribute="top" secondItem="P3R-7d-k4Q" secondAttribute="bottom" id="SLh-LR-T8n"/>
+                                            <constraint firstItem="jCC-66-bz4" firstAttribute="width" secondItem="4Hw-fz-jpY" secondAttribute="width" multiplier="0.55" id="Vqo-Db-MC0"/>
+                                            <constraint firstItem="P3R-7d-k4Q" firstAttribute="width" secondItem="4Hw-fz-jpY" secondAttribute="width" multiplier="0.5" id="aVO-nU-q1t"/>
+                                            <constraint firstItem="Cfm-7C-pmG" firstAttribute="centerX" secondItem="4Hw-fz-jpY" secondAttribute="centerX" multiplier="0.4" id="hja-ST-wxP"/>
+                                            <constraint firstItem="P3R-7d-k4Q" firstAttribute="height" secondItem="4Hw-fz-jpY" secondAttribute="height" multiplier="0.2" id="rcr-fx-hEK"/>
+                                            <constraint firstItem="Cfm-7C-pmG" firstAttribute="height" secondItem="4Hw-fz-jpY" secondAttribute="height" multiplier="0.35" id="s3A-1B-ZXw"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -201,6 +227,12 @@
                             <constraint firstItem="Tni-vy-k2d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mzc-5e-tbP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pickPC" destination="L82-iL-y2b" id="O6x-po-Y3e"/>
+                        <outlet property="pickUser" destination="P3R-7d-k4Q" id="9vH-2T-gBl"/>
+                        <outlet property="score" destination="jCC-66-bz4" id="Czc-sz-bey"/>
+                        <outlet property="winner" destination="Cfm-7C-pmG" id="ncs-4a-ncQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
