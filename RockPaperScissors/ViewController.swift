@@ -10,8 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var pickUser: UITextView!
     @IBOutlet weak var pickPC: UITextView!
-    @IBOutlet weak var score: UITextView!
     @IBOutlet weak var winner: UITextView!
+    @IBOutlet weak var userpoints: UITextView!
+    @IBOutlet weak var pcpoints: UITextView!
     
 
     override func viewDidLoad() {
@@ -33,9 +34,13 @@ class ViewController: UIViewController {
         
         switch win {
         case "User":
-            score.text = "hola"
+            let points = Int(userpoints.text)
+            userpoints.text = String(points! + 1)
+        case "PC":
+            let points = Int(pcpoints.text)
+            pcpoints.text = String(points! + 1)
         default:
-            <#code#>
+            winner.text = winner.text
         }
     }
     
@@ -46,7 +51,20 @@ class ViewController: UIViewController {
         
         let scores = Score()
         
-        winner.text = "Winner: " + scores.pickWinner(userPick : "Lizard", pcPick : pcPick)
+        let win = scores.pickWinner(userPick : "Lizard", pcPick : pcPick)
+        
+        winner.text = "Winner: " + win
+        
+        switch win {
+        case "User":
+            let points = Int(userpoints.text)
+            userpoints.text = String(points! + 1)
+        case "PC":
+            let points = Int(pcpoints.text)
+            pcpoints.text = String(points! + 1)
+        default:
+            winner.text = winner.text
+        }
     }
     
     @IBAction func Paper(_ sender: Any) {
@@ -56,7 +74,20 @@ class ViewController: UIViewController {
         
         let scores = Score()
         
-        winner.text = "Winner: " + scores.pickWinner(userPick : "Paper", pcPick : pcPick)
+        let win = scores.pickWinner(userPick : "Paper", pcPick : pcPick)
+        
+        winner.text = "Winner: " + win
+        
+        switch win {
+        case "User":
+            let points = Int(userpoints.text)
+            userpoints.text = String(points! + 1)
+        case "PC":
+            let points = Int(pcpoints.text)
+            pcpoints.text = String(points! + 1)
+        default:
+            winner.text = winner.text
+        }
     }
     
     @IBAction func Scissors(_ sender: Any) {
@@ -66,7 +97,20 @@ class ViewController: UIViewController {
         
         let scores = Score()
         
-        winner.text = "Winner: " + scores.pickWinner(userPick : "Scissors", pcPick : pcPick)
+        let win = scores.pickWinner(userPick : "Scissors", pcPick : pcPick)
+        
+        winner.text = "Winner: " + win
+        
+        switch win {
+        case "User":
+            let points = Int(userpoints.text)
+            userpoints.text = String(points! + 1)
+        case "PC":
+            let points = Int(pcpoints.text)
+            pcpoints.text = String(points! + 1)
+        default:
+            winner.text = winner.text
+        }
     }
     
     @IBAction func Spock(_ sender: Any) {
@@ -76,12 +120,27 @@ class ViewController: UIViewController {
         
         let scores = Score()
         
-        winner.text = "Winner: " + scores.pickWinner(userPick : "Spock", pcPick : pcPick)
+        let win = scores.pickWinner(userPick : "Spock", pcPick : pcPick)
+        
+        winner.text = "Winner: " + win
+        
+        switch win {
+        case "User":
+            let points = Int(userpoints.text)
+            userpoints.text = String(points! + 1)
+        case "PC":
+            let points = Int(pcpoints.text)
+            pcpoints.text = String(points! + 1)
+        default:
+            winner.text = winner.text
+        }
     }
     
     @IBAction func reset(_ sender: Any) {
         pickUser.text = "Player: "
         pickPC.text = "PC: "
+        userpoints.text = "0"
+        pcpoints.text = "0"
     }
 }
 
