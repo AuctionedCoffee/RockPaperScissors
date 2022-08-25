@@ -7,7 +7,16 @@
 
 import Foundation
 
+
+
+/// Funcion que recive 2 strings y devuelve un ganador
 public class Score{
+    
+    /// Entre 2 Strings elige quien gano
+    /// - Parameters:
+    ///   - userPick: String que el usuario eligio
+    ///   - pcPick: String que se genero para la PC
+    /// - Returns: String de quien gano o si fue empate
     public func pickWinner (userPick : String, pcPick : String) -> String {
         
         if userPick == pcPick {
