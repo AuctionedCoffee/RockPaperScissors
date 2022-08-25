@@ -41,6 +41,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbT-xc-6xK" userLabel="Rock">
                                                 <rect key="frame" x="114.5" y="5" width="123" height="94"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="RockButton"/>
                                                 <state key="normal" image="rock-paper-scissors"/>
                                                 <connections>
                                                     <action selector="Rock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vYN-Te-QbL"/>
@@ -60,6 +61,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cja-Z8-XKD" userLabel="Lizard">
                                                 <rect key="frame" x="229" y="5.5" width="123" height="94"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="LizardButton"/>
                                                 <state key="normal" image="rock-paper-scissors copy 3"/>
                                                 <connections>
                                                     <action selector="Lizard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZaM-sf-69t"/>
@@ -67,6 +69,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkI-lr-Czp" userLabel="Paper">
                                                 <rect key="frame" x="17.5" y="5.5" width="123.5" height="94"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="PaperButton"/>
                                                 <state key="normal" image="rock-paper-scissors copy"/>
                                                 <connections>
                                                     <action selector="Paper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4T2-OL-yW2"/>
@@ -90,6 +93,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Po-ei-nQf" userLabel="Scissors">
                                                 <rect key="frame" x="53" y="5" width="123" height="94"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="ScissorsButton"/>
                                                 <state key="normal" image="rock-paper-scissors copy 2"/>
                                                 <connections>
                                                     <action selector="Scissors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LY3-wO-YqG"/>
@@ -97,6 +101,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r2-iP-whh" userLabel="Spock">
                                                 <rect key="frame" x="176" y="5" width="123" height="94"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="SpockButton"/>
                                                 <state key="normal" image="rock-paper-scissors copy 4"/>
                                                 <connections>
                                                     <action selector="Spock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c11-WI-GOx"/>
@@ -122,6 +127,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8f-ih-ay1">
                                                 <rect key="frame" x="70.5" y="0.0" width="211" height="173.5"/>
                                                 <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="ResetButton"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                 <state key="normal" title="Reset" image="RPSLS"/>
                                                 <connections>
@@ -143,6 +149,7 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="User: " translatesAutoresizingMaskIntoConstraints="NO" id="P3R-7d-k4Q" userLabel="PickUser">
                                                 <rect key="frame" x="-17.5" y="0.0" width="176" height="28"/>
                                                 <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="UserPick"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -150,6 +157,7 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="PC: " translatesAutoresizingMaskIntoConstraints="NO" id="L82-iL-y2b" userLabel="PickPC">
                                                 <rect key="frame" x="-17.5" y="28" width="176" height="27.5"/>
                                                 <color key="backgroundColor" red="0.081572614609999997" green="0.072830997410000001" blue="0.23541092869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="PCPick"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -157,30 +165,35 @@
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Winner: " translatesAutoresizingMaskIntoConstraints="NO" id="Cfm-7C-pmG" userLabel="Winner">
                                                 <rect key="frame" x="-17.5" y="55.5" width="176" height="49"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Winner"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Score User:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jCC-66-bz4" userLabel="ScoreUser">
                                                 <rect key="frame" x="167" y="0.0" width="193.5" height="28"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="ScoreUserLabel"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Joy-ZQ-BZe" userLabel="ScoreUPoints">
                                                 <rect key="frame" x="229" y="28" width="70" height="27.5"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="ScoreUser"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Score PC:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Ma-b1-DwZ" userLabel="ScorePC">
                                                 <rect key="frame" x="220" y="55.5" width="88" height="28"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="ScorePCLabel"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iLx-qx-5O7" userLabel="ScorePPoints">
                                                 <rect key="frame" x="237.5" y="83.5" width="53" height="28"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="ScorePC"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

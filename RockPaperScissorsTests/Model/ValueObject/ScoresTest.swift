@@ -1,13 +1,13 @@
 //
-//  ScoreTests.swift
+//  ScoresTest.swift
 //  RockPaperScissorsTests
 //
-//  Created by Javier Alejandro Medrano Fierro on 22/08/22.
+//  Created by Javier Alejandro Medrano Fierro on 24/08/22.
 //
 
 import XCTest
 
-class ScoreTests: XCTestCase {
+class ScoresTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
